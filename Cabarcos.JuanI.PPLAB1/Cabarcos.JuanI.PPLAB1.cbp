@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Cabarcos.JuanI.PPLAB1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Cabarcos.JuanI.PPLAB1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Cabarcos.JuanI.PPLAB1" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="fecha.h" />
+		<Unit filename="funcionesAutos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="funcionesAutos.h" />
+		<Unit filename="funcionesColores.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="funcionesColores.h" />
+		<Unit filename="funcionesMarcas.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="funcionesMarcas.h" />
+		<Unit filename="funcionesServicios.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="funcionesServicios.h" />
+		<Unit filename="funcionesTrabajos.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="funcionesTrabajos.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
