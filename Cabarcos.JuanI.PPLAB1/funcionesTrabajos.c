@@ -151,7 +151,7 @@ void mostrarTrabajo(eTrabajo unTrabajo, eAuto autos[], int tamA, eServicio servi
 
     if(!cargarDescripcionServicioParaTrabajo(servicios, tamS, unTrabajo.idServicio, descripcionServicio)){
 
-        printf(" %4d  %10s  %10s        %d/%d/%d", unTrabajo.id, unTrabajo.patente, descripcionServicio, unTrabajo.fecha, unTrabajo.fecha.dia, unTrabajo.fecha.mes, unTrabajo.fecha.anio);
+        printf(" %4d  %10s  %10s        %d/%d/%d\n", unTrabajo.id, unTrabajo.patente, descripcionServicio, unTrabajo.fecha, unTrabajo.fecha.dia, unTrabajo.fecha.mes, unTrabajo.fecha.anio);
 
     }
     else{
