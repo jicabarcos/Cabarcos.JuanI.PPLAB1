@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1602687114 source:c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\main.c
+1603288887 source:c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -10,16 +10,17 @@
 	"funcionesServicios.h"
 	"funcionesTrabajos.h"
 
-1602687200 c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionesautos.h
+1603290943 c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionesautos.h
 	"funcionesColores.h"
 	"funcionesMarcas.h"
 
-1602687104 source:c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionesautos.c
+1603290943 source:c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionesautos.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 	"funcionesAutos.h"
+	"validaciones.h"
 
 1602686859 source:c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionescolores.c
 	<stdio.h>
@@ -30,25 +31,25 @@
 
 1602686859 c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionescolores.h
 
-1602686603 source:c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionesmarcas.c
+1603223741 source:c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionesmarcas.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 	"funcionesMarcas.h"
 
-1602686603 c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionesmarcas.h
+1603291630 c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionesmarcas.h
 
-1602687055 source:c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionesservicios.c
+1603290943 source:c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionesservicios.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 	"funcionesServicios.h"
 
-1602687077 c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionesservicios.h
+1603291630 c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionesservicios.h
 
-1602687257 c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionestrabajos.h
+1603291630 c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionestrabajos.h
 	"funcionesAutos.h"
 	"funcionesColores.h"
 	"funcionesMarcas.h"
@@ -59,10 +60,20 @@
 
 1602687177 source:c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\fecha.c
 
-1602687055 source:c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionestrabajos.c
+1603229275 source:c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\funcionestrabajos.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<string.h>
 	"funcionesTrabajos.h"
+	"validaciones.h"
+
+1603225121 c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\validaciones.h
+
+1603283596 source:c:\users\intel\documents\github\cabarcos.juani.pplab1\cabarcos.juani.pplab1\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"validaciones.h"
 

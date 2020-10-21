@@ -4,6 +4,8 @@
 #include <string.h>
 
 #include "funcionesTrabajos.h"
+#include "funcionesServicios.h"
+#include "validaciones.h"
 
 int inicializarTrabajos(eTrabajo trabajos[], int tamT){
 
@@ -32,6 +34,10 @@ int altaTrabajo(eTrabajo trabajos[], int tamT, eAuto autos[], int tamA, eMarca m
     int indicePatente;
     eTrabajo nuevoTrabajo;
     char patente[6];
+    int servicioValido;
+    int diaValido;
+    int mesValido;
+    int anioValido;
 
     if((trabajos != NULL) && (tamT > 0) && (id > 0)){
 
@@ -69,10 +75,27 @@ int altaTrabajo(eTrabajo trabajos[], int tamT, eAuto autos[], int tamA, eMarca m
                 mostrarAuto(autos[indicePatente], marcas, tamM, colores, tamC);
                 printf("\n\n");
                 mostrarServicios(servicios, tamS);
-                printf("\nQue trabajo desea realizarle?\n");
-                scanf("%d", &nuevoTrabajo.idServicio);
+                do{
+
+                    servicioValido = getValidInt("Ingrese ID del servicio a realizar:\n", "Debe estar entre 20000 y 20003. Vuelva a ingresar.\n", &nuevoTrabajo.idServicio, 20000, 20003, 1);
+
+                }while(servicioValido == -1);
                 printf("Ingrese fecha:\n");
-                scanf("%d/%d/%d", &nuevoTrabajo.fecha.dia, &nuevoTrabajo.fecha.mes, &nuevoTrabajo.fecha.anio);
+                do{
+
+                    diaValido = getValidInt("Dia: ", "Debe estar entre 1 y 31. Vuelva a ingresar.\n", &nuevoTrabajo.fecha.dia, 1, 31, 1);
+
+                }while(diaValido == -1);
+                do{
+
+                    mesValido = getValidInt("Mes: ", "Debe estar entre 1 y 12. Vuelva a ingresar: ", &nuevoTrabajo.fecha.mes, 1, 12, 1);
+
+                }while(mesValido == -1);
+                do{
+
+                    anioValido = getValidInt("Anio: ", "Debe estar entre 1990 y 2020. Vuelva a ingresar: ", &nuevoTrabajo.fecha.anio, 1990, 2020, 1);
+
+                }while(anioValido == -1);
 
             }
 
@@ -160,28 +183,5 @@ void mostrarTrabajo(eTrabajo unTrabajo, eAuto autos[], int tamA, eServicio servi
 
     }
 
-
-}
-
-int cargarDescripcionServicioParaTrabajo(eServicio servicios[], int tamS, int id, char descripcionS[]){
-
-    int error = 1;
-
-    if(servicios != NULL && tamS > 0 && id > 0 && descripcionS != NULL){
-
-        for(int i = 0; i < tamS; i++){
-
-            if(servicios[i].id == id){
-
-                strcpy(descripcionS, servicios[i].descripcion);
-                error = 0;
-                break;
-
-            }
-
-        }
-
-    }
-    return error;
 
 }

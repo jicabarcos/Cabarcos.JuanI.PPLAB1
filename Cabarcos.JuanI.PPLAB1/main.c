@@ -23,17 +23,18 @@ int main()
     // VARIABLES
     eAuto listaAutos[TAM_AUTO];
     eTrabajo listaTrabajos[TAM_TRABAJO];
-    char eleccionMenu;
+    char eleccionMenuPrincipal;
     int flagAltaAuto = 0;
     int flagAltaTrabajo = 0;
     int proximoIdAuto = 1;
     int proximoIdTrabajo = 1;
+    char eleccionMenuInformes;
     char salida;
 
     // HARDCODE
     eMarca listaMarcas[TAM_MARCA] = {{1000, "Renault"}, {1001, "Fiat"}, {1002, "Ford"}, {1003, "Chevrolet"}, {1004, "Peugeot"}};
     eColor listaColores[TAM_COLOR] = {{5000, "Negro"}, {5001, "Blanco"}, {5002, "Gris"}, {5003, "Rojo"}, {5004, "Azul"}};
-    eServicio listaServicios[TAM_SERVICIO] = {{20000, "Lavado", 250}, {20001, "Pulido", 300}, {20002, "Encerado", 400}, {20003, "Completo", 600}};
+    eServicio listaServicios[TAM_SERVICIO] = {{20000, "Lavado  ", 250}, {20001, "Pulido  ", 300}, {20002, "Encerado", 400}, {20003, "Completo", 600}};
 
     if((!inicializarAutos(listaAutos, TAM_AUTO)) && (!inicializarTrabajos(listaTrabajos, TAM_TRABAJO))){
 
@@ -50,9 +51,9 @@ int main()
 
     do{
 
-        eleccionMenu = menuDeOpciones(0);
+        eleccionMenuPrincipal = menuDeOpciones(0);
 
-        switch(eleccionMenu){
+        switch(eleccionMenuPrincipal){
 
             case 'A':
                 // ALTA
@@ -92,7 +93,7 @@ int main()
                 }
                 else{
 
-                    printf("Antes de intentar modificar, tiene que dar de alta al menos un auto!\n");
+                    printf("\nAntes de intentar modificar, tiene que dar de alta al menos un auto!\n");
 
                 }
                 break;
@@ -120,7 +121,7 @@ int main()
                 }
                 else{
 
-                    printf("Antes de intentar dar de baja, tiene que dar de alta al menos un auto!\n");
+                    printf("\nAntes de intentar dar de baja, tiene que dar de alta al menos un auto!\n");
 
                 }
                 break;
@@ -136,7 +137,7 @@ int main()
                 }
                 else{
 
-                    printf("Antes de intentar listar, tiene que dar de alta al menos un auto!\n");
+                    printf("\nAntes de intentar listar, tiene que dar de alta al menos un auto!\n");
 
                 }
                 break;
@@ -180,7 +181,7 @@ int main()
                 }
                 else{
 
-                    printf("Antes de intentar realizar un trabajo, tiene que dar de alta al menos un auto!\n");
+                    printf("\nAntes de intentar realizar un trabajo, tiene que dar de alta al menos un auto!\n");
 
                 }
                 break;
@@ -195,11 +196,109 @@ int main()
                 }
                 else{
 
-                    printf("Antes de intentar listar los trabajos, se tiene que realizar al menos uno!\n");
+                    printf("\nAntes de intentar listar los trabajos, se tiene que realizar al menos uno!\n");
 
                 }
                 break;
 
+            case 'J':
+                // INFORMES
+                eleccionMenuInformes = menuDeOpciones(2);
+
+                switch(eleccionMenuInformes){
+
+                    case 'A':
+                        // LISTAR AUTOS DE DETERMINADO COLOR
+                        if(flagAltaAuto){
+
+                            system("cls");
+                            mostrarAutosPorColor(listaAutos, TAM_AUTO, listaMarcas, TAM_MARCA, listaColores, TAM_COLOR);
+
+                        }
+                        else{
+
+                            printf("\nAntes de intentar listar, tiene que dar de alta al menos un auto!\n");
+
+                        }
+                        break;
+
+                    case 'B':
+                        // LISTAR AUTOS DE DETERMINADA MARCA
+                        if(flagAltaAuto){
+
+                            system("cls");
+                            mostrarAutosPorMarca(listaAutos, TAM_AUTO, listaMarcas, TAM_MARCA, listaColores, TAM_COLOR);
+
+                        }
+                        else{
+
+                            printf("\nAntes de intentar listar, tiene que dar de alta al menos un auto!\n");
+
+                        }
+                        break;
+
+                    case 'C':
+                        // INFORMAR AUTO/S MAS VIEJO/S
+                        if(flagAltaAuto){
+
+                            system("cls");
+                            buscarAutoMasViejo(listaAutos, TAM_AUTO, listaMarcas, TAM_MARCA, listaColores, TAM_COLOR);
+
+                        }
+                        else{
+
+                            printf("\nAntes de intentar listar, tiene que dar de alta al menos un auto!\n");
+
+                        }
+                        break;
+
+                    case 'D':
+                        // LISTADO DE AUTOS SEPARADOS POR MARCA
+                        if(flagAltaAuto){
+
+                            system("cls");
+                            mostrarAutosSeparadosPorMarca(listaAutos, TAM_AUTO, listaMarcas, TAM_MARCA, listaColores, TAM_COLOR);
+
+
+                        }
+                        else{
+
+                            printf("\nAntes de intentar listar, tiene que dar de alta al menos un auto!\n");
+
+                        }
+                        break;
+
+                    case 'E':
+                        // CANTIDAD DE AUTOS DE DETERMINADOS COLOR Y MARCA
+                        if(flagAltaAuto){
+
+                            system("cls");
+                            cantidadAutosColorYMarca(listaAutos, TAM_AUTO, listaMarcas, TAM_MARCA, listaColores, TAM_COLOR);
+
+                        }
+                        else{
+
+                            printf("\nAntes de intentar listar, tiene que dar de alta al menos un auto!\n");
+
+                        }
+                        break;
+
+                    case 'F':
+                        // MARCA/S MAS ELEGIDA/S
+                        if(flagAltaAuto){
+
+                            system("cls");
+                            marcaMasElegida(listaAutos, TAM_AUTO, listaMarcas, TAM_MARCA, listaColores, TAM_COLOR);
+
+                        }
+                        else{
+
+                            printf("\nAntes de intentar listar, tiene que dar de alta al menos un auto!\n");
+
+                        }
+                        break;
+
+                }
 
         }
 
